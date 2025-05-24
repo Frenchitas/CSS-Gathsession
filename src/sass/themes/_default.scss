@@ -1,0 +1,42 @@
+@use '../abstracts/abstracts' as *;
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+  background-color: $grey;
+  font-family: $primary-font;
+}
+
+body {
+    &::before {
+        content: "";
+        position: absolute;
+        right: -10px;
+        bottom: -200px;
+        width: 500px;
+        height: 500px;
+        background-image: url("../images/ellipse-1.svg");
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        pointer-events: none;
+        background-size: contain;
+        z-index: 0;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: -50px;
+        bottom: -200px;
+        width: 800px;
+        height: 800px;
+        background-image: url("../images/ellipse-2.svg");
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        pointer-events: none;
+        background-size: contain;
+    }
+}
